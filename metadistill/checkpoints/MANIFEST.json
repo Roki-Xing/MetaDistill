@@ -1,0 +1,82 @@
+{
+  "baselines": {
+    "les": {
+      "file": "checkpoints/baselines/les_metabbo.pt",
+      "training_framework": "MetaBBO",
+      "training_dim": 10,
+      "population_size": 200
+    },
+    "lde": {
+      "file": "checkpoints/baselines/lde_policy_gradient.pt",
+      "training_framework": "Policy Gradient",
+      "training_dim": 10,
+      "population_size": 200
+    },
+    "lga": {
+      "file": "checkpoints/baselines/lga_metabbo.pt",
+      "training_framework": "MetaBBO",
+      "training_dim": 10,
+      "population_size": 200
+    },
+    "pom": {
+      "file": "checkpoints/baselines/pom_original.pt",
+      "training_framework": "POM baseline checkpoint",
+      "training_dim": 10,
+      "population_size": 200
+    }
+  },
+  "metadistill": {
+    "bbob": {
+      "les": {
+        "file": "checkpoints/metadistill/bbob/les.pt",
+        "training_config": "configs/distill_les.json",
+        "distillation_interval": 10,
+        "population_size": 200,
+        "epochs": 128,
+        "loss": "KL with normalization"
+      },
+      "lde": {
+        "file": "checkpoints/metadistill/bbob/lde.pt",
+        "training_config": "configs/distill_lde.json",
+        "distillation_interval": 10,
+        "population_size": 200,
+        "epochs": 128,
+        "loss": "KL with normalization"
+      },
+      "lga": {
+        "file": "checkpoints/metadistill/bbob/lga.pt",
+        "training_config": "configs/distill_lga.json",
+        "distillation_interval": 10,
+        "population_size": 200,
+        "epochs": 128,
+        "loss": "KL with normalization"
+      },
+      "pom": {
+        "file": "checkpoints/metadistill/bbob/pom.pt",
+        "training_config": "configs/distill_pom.json",
+        "distillation_interval": 10,
+        "population_size": 200,
+        "epochs": 128,
+        "loss": "KL with normalization"
+      }
+    },
+    "control": {
+      "les": {
+        "file": "checkpoints/metadistill/control/les.pt",
+        "used_for": "LunarLander and robot control tasks"
+      },
+      "lde": {
+        "file": "checkpoints/metadistill/control/lde.pt",
+        "used_for": "LunarLander and robot control tasks"
+      },
+      "lga": {
+        "file": "checkpoints/metadistill/control/lga.pt",
+        "used_for": "LunarLander and robot control tasks"
+      },
+      "pom": {
+        "file": "checkpoints/metadistill/control/pom.pt",
+        "used_for": "LunarLander and robot control tasks"
+      }
+    }
+  }
+}
