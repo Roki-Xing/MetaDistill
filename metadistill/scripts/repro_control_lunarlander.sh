@@ -7,15 +7,15 @@ cd "${REPO_ROOT}"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 NETCFG_DIR="${NETCFG_DIR:-${REPO_ROOT}/tasks/neuroevolution/config}"
 
-TASKS=(3 4 5 6)
+TASKS=(2)
 SEEDS=(0 1 2)
 POPSIZE=200
-GENERATIONS=100
+GENERATIONS=500
 STEPS=256
 ADAPT_LR=1e-4
 MAX_JOBS="${MAX_JOBS:-4}"
 
-TAG="${TAG:-neuroevo_robot_tasks_gen100_seed0-2}"
+TAG="${TAG:-control_lunarlander_seed0-2}"
 OUT_ROOT="${OUT_ROOT:-${REPO_ROOT}/artifacts/neuroevo/${TAG}}"
 LOG_DIR="${OUT_ROOT}/logs"
 
@@ -269,4 +269,3 @@ done
 echo "[INFO] waiting for ${TAG} jobs to finish..."
 wait
 echo "[OK] Done: ${OUT_ROOT}"
-

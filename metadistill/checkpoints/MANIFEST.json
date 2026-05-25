@@ -63,19 +63,19 @@
     "control": {
       "les": {
         "file": "checkpoints/metadistill/control/les.pt",
-        "used_for": "LunarLander and robot control tasks"
+        "used_for": "LunarLander, BipedalWalker, and Acrobot control-task evaluations"
       },
       "lde": {
         "file": "checkpoints/metadistill/control/lde.pt",
-        "used_for": "LunarLander and robot control tasks"
+        "used_for": "LunarLander, BipedalWalker, and Acrobot control-task evaluations"
       },
       "lga": {
         "file": "checkpoints/metadistill/control/lga.pt",
-        "used_for": "LunarLander and robot control tasks"
+        "used_for": "LunarLander, BipedalWalker, and Acrobot control-task evaluations"
       },
       "pom": {
         "file": "checkpoints/metadistill/control/pom.pt",
-        "used_for": "LunarLander and robot control tasks"
+        "used_for": "LunarLander, BipedalWalker, and Acrobot control-task evaluations"
       }
     }
   }

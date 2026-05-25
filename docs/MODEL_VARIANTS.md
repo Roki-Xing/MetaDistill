@@ -3,11 +3,11 @@
 This bundle contains two evaluation tracks:
 
 - BBOB (four optimizers: LES / LDE / LGA / POM).
-- NeuroEvo (robot tasks + LunarLander).
+- Control tasks (LunarLander / BipedalWalker / Acrobot).
 
 For each optimizer, the evaluation scripts support:
 
-- a baseline checkpoint (teacher / non-distilled)
+- a native baseline checkpoint (non-distilled)
 - a MetaDistill checkpoint (distilled)
 - per-variant SSFT settings (md_j0, md_j1, md_j3, md_j5)
 
@@ -54,33 +54,33 @@ POM
 - baseline config: `configs/pom_config.json`
 - md config: `configs/pom_d10_pop200.json`
 
-## NeuroEvo
+## Control Tasks
 
 Compared to BBOB, the LDE/LGA checkpoints are shared, while LES/POM use different distilled variants.
 
-LES (NeuroEvo)
+LES (control tasks)
 
 - baseline ckpt: `checkpoints/baselines/les_metabbo.pt`
 - md ckpt: `checkpoints/metadistill/control/les.pt`
 - md config: `configs/les_d10_pop200.json`
 
-LDE (NeuroEvo)
+LDE (control tasks)
 
 - baseline ckpt: `checkpoints/baselines/lde_policy_gradient.pt`
-- md ckpt: `checkpoints/metadistill/bbob/lde.pt`
+- md ckpt: `checkpoints/metadistill/control/lde.pt`
 - baseline config: `configs/lde_pg_pop200_d10_sample_h64.json`
 - md config: `configs/lde_d10_pop200.json`
 
-LGA (NeuroEvo)
+LGA (control tasks)
 
 - baseline ckpt: `checkpoints/baselines/lga_metabbo.pt`
-- md ckpt: `checkpoints/metadistill/bbob/lga.pt`
+- md ckpt: `checkpoints/metadistill/control/lga.pt`
 - baseline config: `configs/lga_config.json`
 - md config: `configs/lga_d10_pop200_parentsoft_tau1.json`
 
-POM (NeuroEvo)
+POM (control tasks)
 
 - baseline ckpt: `checkpoints/baselines/pom_original.pt`
-- md ckpt (NeuroEvo): `checkpoints/metadistill/control/pom.pt`
+- md ckpt: `checkpoints/metadistill/control/pom.pt`
 - baseline config: `configs/pom_config.json`
 - md config: `configs/pom_d10_pop200.json`
